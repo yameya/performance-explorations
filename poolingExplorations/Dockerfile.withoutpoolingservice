@@ -1,0 +1,9 @@
+FROM openjdk:8-jdk
+
+COPY ./httpclients-withoutpooling/build/libs/withoutloggingservice-0.1.0.jar /data/poolingexplorations/withoutloggingservice-0.1.0.jar
+
+WORKDIR /data/poolingexplorations
+
+CMD ["java","-jar","withoutloggingservice-0.1.0.jar"]
+
+EXPOSE 8081

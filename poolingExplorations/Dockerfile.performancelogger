@@ -1,0 +1,7 @@
+FROM openjdk:8-jdk
+
+COPY ./httpclients/build/libs/performaceloggerservice-0.1.0.jar /data/poolingexplorations/performaceloggerservice-0.1.0.jar
+
+CMD ["java","-jar","/data/poolingexplorations/performaceloggerservice-0.1.0.jar"]
+
+EXPOSE 8080

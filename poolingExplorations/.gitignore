@@ -1,0 +1,22 @@
+#Ignore all files in out folder
+httpclients/out
+httpclients-withoutpooling/out
+httpclients-withpooling/out
+
+httpclients/build/tmp
+httpclients-withoutpooling/build/tmp
+httpclients-withpooling/build/tmp
+
+httpclients/.idea
+httpclients-withoutpooling/.idea
+httpclients-withpooling/.idea
+
+httpclients/.gradle
+httpclients-withoutpooling/.gradle
+httpclients-withpooling/.gradle
+
+httpclients/build/classes
+httpclients-withoutpooling/build/classes
+httpclients-withpooling/build/classes
+
+*.DS*

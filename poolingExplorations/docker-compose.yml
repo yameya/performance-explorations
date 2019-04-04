@@ -1,0 +1,29 @@
+version: "3"
+services: 
+  performancelogger: 
+    build: 
+      context: ./
+      dockerfile: Dockerfile.performancelogger
+    ports: 
+      - "8080:8080"
+  withoutpoolingservice: 
+    build:
+      context: ./
+      dockerfile: Dockerfile.withoutpoolingservice 
+    ports: 
+      - "8081:8081"
+    depends_on: 
+      - performancelogger
+    links: 
+      - performancelogger
+  withpoolingservice: 
+    build: 
+      context: ./
+      dockerfile: Dockerfile.withpoolingservice
+    ports: 
+      - "8082:8082"
+    depends_on:
+      - performancelogger
+    links:
+      - performancelogger
+
