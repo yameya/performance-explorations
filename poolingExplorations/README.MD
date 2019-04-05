@@ -15,6 +15,7 @@ httpclients-withpooling exposes a API getRemotePerformanceStats which when calle
 
 ## Testing reports:
 For both pooled and non-pooled connections, the read timeout and connection timeout was configured to be 5 seconds.
+Number of pooled connections for the case where pooling is used, is = 25.
 All the three applications were hosted on docker containers using the docker-compose and the tool used to fire requests is Apache JMeter. The below reports summarize the results.
 
 ### Report
