@@ -1,5 +1,15 @@
 
 ## Context
+
+Often, there is a need for a application to fetch data from another service which is commonly done using a http request.
+In springboot applications, one of the commonly used way to make a http request, is using [RestTemplate](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html)
+.By default, RestTemplate creates a new http connection for every request.
+
+However, when the number of such requests is high, it might not be efficient to use the default implementation.
+Instead, pooled http connections can be used. Reference for this: [PoolingHttpClientConnectionManager](http://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/conn/PoolingHttpClientConnectionManager.html)
+
+#### The purpose of this project was to analyze and compare the performance of pooled and non-pooled http connections.
+
 This folder contains three simple spring boot applications:
 1. httpclients
 2. httpclients-withpooling
@@ -11,7 +21,7 @@ httpclients-withpooling exposes a API getRemotePerformanceStats which when calle
 
 httpclients-withpooling exposes a API getRemotePerformanceStats which when called, calls the performanceStatsGet API using RestTemplate which creates a new HttpConnection on every call.
 
-#### The purpose of this project was to analyze and compare the performance of pooled and non-pooled http connections.
+
 
 ## Testing reports:
 For both pooled and non-pooled connections, the read timeout and connection timeout was configured to be 5 seconds.
