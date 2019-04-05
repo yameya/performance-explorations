@@ -1,2 +1,3 @@
 # performance-explorations
-Adding this repository to keep track of all the experiment projects to evaluate performance related stuff.
+
+This repository maintains all the projects meant to analyze any performance related stuff.
