@@ -11,7 +11,7 @@ httpclients-withpooling exposes a API getRemotePerformanceStats which when calle
 
 httpclients-withpooling exposes a API getRemotePerformanceStats which when called, calls the performanceStatsGet API using RestTemplate which creates a new HttpConnection on every call.
 
-#### The prupose of this project was to analyze and compare the performace of pooled and non-pooled http connections.
+#### The purpose of this project was to analyze and compare the performance of pooled and non-pooled http connections.
 
 ## Testing reports:
 For both pooled and non-pooled connections, the read timeout and connection timeout was configured to be 5 seconds.
